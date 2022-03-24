@@ -4985,6 +4985,11 @@
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"
 
+"react-native-smooth-picker@^1.1.5":
+  "integrity" "sha512-bjbaydabhmhRBVOIbXclzz26LFgN0vOZwj65KWImg5Jqhqzkty5h9cryPf52uJQ22uPLvkrDtSVsHxgUb5qWcA=="
+  "resolved" "https://registry.npmjs.org/react-native-smooth-picker/-/react-native-smooth-picker-1.1.5.tgz"
+  "version" "1.1.5"
+
 "react-native-svg@^9.13.6":
   "integrity" "sha512-vjjuJhEhQCwWjqsgWyGy6/C/LIBM2REDxB40FU1PMhi8T3zQUwUHnA6M15pJKlQG8vaZyA+QnLyIVhjtujRgig=="
   "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-9.13.6.tgz"
