@@ -4191,6 +4191,13 @@
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   "version" "2.1.3"
 
+"myfxbook-api-client@^1.0.4":
+  "integrity" "sha512-mp4uxh+w5cWpBGetOsSUHcCN/+/UH6+IG9TRwBzoX0pjIvP717sXFeZbYSdBRs10YHCC/lb8WTWygAtnQ26L6w=="
+  "resolved" "https://registry.npmjs.org/myfxbook-api-client/-/myfxbook-api-client-1.0.4.tgz"
+  "version" "1.0.4"
+  dependencies:
+    "node-fetch" "^2.6.0"
+
 "mz@^2.7.0":
   "integrity" "sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q=="
   "resolved" "https://registry.npmjs.org/mz/-/mz-2.7.0.tgz"

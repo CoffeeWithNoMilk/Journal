@@ -17,7 +17,7 @@ const AppButton = ({onPress, title, img, taskIsComplete, type, size}) => {
     const small = width / 3;
     const btnSize = size === 'large' ? large : small;
     const btnBgColor = taskIsComplete === true ? '#6CBE49' : 'rgba(0,0,0,.5)';
-    type === 'withImg' ? 'withIcon' : null;
+    type === 'withImg' ? 'withIcon' : null;  // define if button has an image or icon
 
     const appButtonContainer = {
         backgroundColor: size === 'small' ? '#808080' : btnBgColor,

@@ -11,7 +11,11 @@ import Leaders from '../components/leaders';
 import AccountabilityMeter from '../components/accountabilityMeter';
 import TradeList  from '../components/tradeList';
 
+
 const HomeScreen = ({navigation}) => (
+
+  
+
   <View style={styles.container}>
 
     <View style ={styles.header}>
