@@ -54,59 +54,7 @@ const HomeScreen = ({ navigation }) => {
         <Text style={{ fontSize: 12, color: 'white', marginTop: 10, fontWeight: '600' }}>You made a plan, now stay accountable!</Text>
       </View>
 
-      <View style={{ width: '100%' }}>
-        <View style={{
-          flexDirection: 'row', alignItems: 'center',
-          width: '100%', paddingHorizontal: 25,
-        }}>
-          <View style={{ margin: 10, flexDirection: 'row' }}>
-            <BouncyCheckbox
-              size={15}
-              fillColor='#6CBE49'
-              isChecked={checkboxState}
-              onPress={() => setCheckboxState(!checkboxState)} />
-
-            <Text style={{ color: 'white' }}>Journal all trades</Text>
-          </View>
-
-        </View>
-      </View>
-
-      <View style={{ width: '100%' }}>
-        <View style={{
-          flexDirection: 'row', alignItems: 'center',
-          width: '100%', paddingHorizontal: 25,
-        }}>
-          <View style={{ margin: 10, flexDirection: 'row' }}>
-            <BouncyCheckbox
-              size={15}
-              fillColor='#B02929'
-              isChecked={checkboxState}
-              onPress={() => setCheckboxState(!checkboxState)} />
-
-            <Text style={{ color: 'white' }}>Do not execeed your risk limit</Text>
-          </View>
-
-        </View>
-      </View>
-      <View style={{ width: '100%' }}>
-        <View style={{
-          flexDirection: 'row', alignItems: 'center',
-          width: '100%', paddingHorizontal: 25,
-        }}>
-          <View style={{ margin: 10, flexDirection: 'row' }}>
-            <BouncyCheckbox
-              size={15}
-              fillColor='#E9971D'
-              isChecked={checkboxState}
-              onPress={() => setCheckboxState(!checkboxState)} />
-
-            <Text style={{ color: 'white' }}>Do not overtrade</Text>
-          </View>
-
-        </View>
-      </View>
-
+    
 
       <AccountabilityMeter />
       {/* <Notification msg={'You have reached your daily risk limit of 2% Time to take a break off the charts'} 
