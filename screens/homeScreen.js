@@ -4,8 +4,7 @@ import { Text, View, Button, StyleSheet, ScrollView, TouchableOpacity } from 're
 import { Alert } from 'react-native-web';
 import AccountabilityMeter from '../components/accountabilityMeter';
 import TradeList from '../components/tradeList';
-import moment from 'moment'
-import BouncyCheckbox from 'react-native-bouncy-checkbox';
+import moment from 'moment';
 import CalendarStrip from 'react-native-calendar-strip';
 
 
@@ -29,7 +28,14 @@ const HomeScreen = ({ navigation }) => {
     borderRadius: 10
   }
   
-  const [checkboxState, setCheckboxState] = useState(true);
+
+  //dummy data
+
+  const data = [{id:1, title: 'GBPUSD Buy Limit @ 1.32728', session: 'London', gain: '-2' , profit: false},
+                {id:2, title: 'GBPUSD Sell Limit @ 1.32728', session: 'New York', gain: '+10' , profit: true}, 
+                {id:3, title: 'GBPUSD Sell @ 1.32728', session: 'Asia', gain: '-3' , profit: false},
+               
+            ];
 
   return (
     <View style={styles.container}>
@@ -71,7 +77,7 @@ const HomeScreen = ({ navigation }) => {
         borderTopWidth: 0.3, width: '100%'
       }}></View>
 
-      <TradeList onPress={() => navigation.navigate('Notes')} />
+      <TradeList onPress={() => navigation.navigate('Notes')} data = {data} />
 
 
 
@@ -86,7 +92,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1A1A1A',
-    alignItems:'center'
+    alignItems:'center', 
+    paddingHorizontal: 10
   },
   header: {
     height: 100,

@@ -11,7 +11,7 @@ const accountabilityMeter = () => {
 
   const container = {
       backgroundColor: 'rgba(250, 250, 250, 0.1)',
-      width: '85%',
+      width: '90%',
       paddingVertical: 20,
       borderRadius: 19
   }
