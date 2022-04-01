@@ -4,10 +4,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {View } from 'react-native';
 import Icon from 'react-native-ico';
 
-import HomeScreen from '../screens/homeScreen';
 import JournalScreen from '../screens/journalScreen';
+//import Notes from '../screens/notes'; //test complete
 import LeaderBoard from '../screens/leaderboardScreen';
 import AccountScreen from '../screens/accountScreen';
+import Home from './homeStack';
+import Journal from './journalStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +24,7 @@ const Tabs = () => {
                     backgroundColor: '#1C1E20',
                     paddingHorizontal: 80,
                     borderTopColor:'#9c9c9c',
-                    borderTopWidth: 0.3
+                    borderTopWidth: 0.3,
                     // borderRadius: 15,
                     // position: 'absolute',
                     // bottom:10,
@@ -37,7 +39,7 @@ const Tabs = () => {
             }
             
             }>
-        <Tab.Screen name= "Home" component={HomeScreen} options={{
+        <Tab.Screen name= "HomeScreen" component={Home} options={{
             tabBarIcon: ({focused}) => (
                 <View>
                     <Icon  width= {27} height= {27} size={30} name ="home" group="ui-interface" color= {focused ? 'white' : 'gray'}/>
@@ -45,7 +47,7 @@ const Tabs = () => {
                 ),
         }} />
 
-        <Tab.Screen name= "Journal" component={JournalScreen} options={{
+        <Tab.Screen name= "JournalScreen" component={Journal} options={{
               tabBarIcon: ({focused}) => (
                 <View>
                     <Icon width= {27} height= {27} name ="book" group="basic" color= {focused ? 'white' : 'gray'}/>

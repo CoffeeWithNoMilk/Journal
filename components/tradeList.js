@@ -2,7 +2,7 @@ import React from 'react'
 import {View,Text, FlatList, TouchableOpacity} from 'react-native'
 import TradeCard from './tradeCard'
 
-const TradeList = () => {
+const TradeList = ({onPress}) => {
 
   const  container = {
       width: '100%',
@@ -19,7 +19,7 @@ const TradeList = () => {
 
    const renderTrades = ({item}) => (
             <TradeCard title = {item.title} session = {item.session} 
-                        gain={item.gain} type={'long'} profit = {false} />
+                        gain={item.gain} type={'long'} profit = {false} onPress={onPress}/>
    )
 
   return (

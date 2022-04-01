@@ -1,18 +1,17 @@
 import React from 'react'
-import {View, Text, Image} from 'react-native'
+import {View, Text, Image, TouchableOpacity} from 'react-native'
 
-const leaders = () => {
+const leaders = ({rank,name, community, points, position}) => {
 
   const container ={
-      width: '90%',
-      backgroundColor: 'white',
+      width: '100%',
+      backgroundColor: rank === 1 ? '#6CBE49' : rank === 2 ? 'white': rank === 3 ? '#E9971D' : 'null',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'space-between',
       paddingHorizontal: 30,
       paddingVertical: 20,
-      margin: 20,
-      elevation: 10,
+      marginVertical: 10,
       borderRadius: 25
   } 
 
@@ -23,26 +22,31 @@ const leaders = () => {
     marginHorizontal: 20,
 };
 
+//universal
+const textStyle = {
+ color: rank === 1 ? 'black' : rank === 2 ? 'black': rank === 3 ? 'black' : 'white',
+}
+
   return (
-    <View style = {container}>
+    <TouchableOpacity style = {container}>
        
 
         <View style={{flexDirection: 'row', alignItems:'center'}}>
-        <Text>1</Text>
+        <Text style = {textStyle}>{rank}.</Text>
         <Image style={imgContainer} source={require('../assets/images/myfxbook.png')}/>
         <View>
-            <Text style ={{fontWeight: '700', fontSize: 16}}>Steve</Text>
-            <Text>8DC</Text>
+            <Text style ={[textStyle,{fontWeight: '700', fontSize: 16}]}>{name}</Text>
+            <Text style = {textStyle}>{community}</Text>
         </View>
         </View>
 
         <View style={{flexDirection: 'row', alignItems:'baseline'}}>
-        <Text style = {{fontWeight:'600', fontSize: 15}}>2099</Text>
-        <Text style ={{fontSize: 12}}> pts.</Text>
+        <Text style = {[textStyle,{fontWeight:'600', fontSize: 15}]}>{points}</Text>
+        <Text style ={[textStyle,{fontSize: 12}]}> pts.</Text>
         </View>
 
         
-    </View>
+    </TouchableOpacity>
   )
 }
 

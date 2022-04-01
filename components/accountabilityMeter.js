@@ -5,20 +5,19 @@ import {View, Text} from 'react-native'
 const accountabilityMeter = () => {
 
   const container = {
-      backgroundColor: '#282A2E',
+      backgroundColor: 'rgba(250, 250, 250, 0.1)',
       width: '85%',
       padding: 20,
       borderRadius: 19
   }
 
   const activityIndicators = {
-    height: 120,
+    height: 50,
     width: '100%',
   }
   return (
     <View style = {container}>
-        <Text style = {{alignSelf:'center', color: 'white'}}>Accountability Metrics</Text>
-
+  
       <View style = {activityIndicators}>
 
       </View>

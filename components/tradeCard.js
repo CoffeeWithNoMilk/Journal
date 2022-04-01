@@ -4,7 +4,7 @@ import BouncyCheckbox from 'react-native-bouncy-checkbox'
 import Icon from 'react-native-ico';
 
 
-const TradeCard = ({title, session, type, gain, profit}) => {
+const TradeCard = ({title, session, type, gain, profit, onPress}) => {
 
   const [checkboxState, setCheckboxState] = useState(false);
 
@@ -63,7 +63,7 @@ const TradeCard = ({title, session, type, gain, profit}) => {
         </View>
 
         <View>
-            { checkboxState  === false ? <TouchableOpacity> 
+            { checkboxState  === false ? <TouchableOpacity onPress={onPress}> 
                     <Icon name="pen" group="basic" style={journalIcon}
                             color = 'white'/>
                     </TouchableOpacity> : null}
