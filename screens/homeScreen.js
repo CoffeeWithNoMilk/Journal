@@ -27,8 +27,8 @@ const HomeScreen = ({ navigation }) => {
     alignItems: 'center',
     borderRadius: 10
   }
-  
 
+  
   //dummy data
 
   const data = [{id:1, title: 'GBPUSD Buy Limit @ 1.32728', session: 'London', gain: '-2' , profit: false},
@@ -42,7 +42,7 @@ const HomeScreen = ({ navigation }) => {
       <View style={{ width: '100%', flex:0.4,
                alignItems:'center', justifyContent:'flex-end' }}>
         <CalendarStrip
-          calendarAnimation={{type: 'parallel', duration: 30}}
+          calendarAnimation={{type: 'parallel', duration: 100}}
           dateNumberStyle={{color: 'white', fontSize:14, fontWeight:'400', }}
           dateNameStyle={{color: 'gray', fontSize:8, fontWeight:'200', }}
           shouldAllowFontScaling ={true}
@@ -52,7 +52,13 @@ const HomeScreen = ({ navigation }) => {
           highlightDateContainerStyle= {selectedDayStyle}
           calendarHeaderStyle={{color:'white'}}
           style={{ height: '50%', width:'100%' }}
+          iconRightStyle= {{display: 'none'}}
+          iconLeftStyle= {{display: 'none'}}
+          onDateSelected={() => alert('congrats')}
+          scrollable={false}
+         
         />
+
       </View>
       <View style={styles.header}>
 
