@@ -15,18 +15,18 @@ const AppButton = ({onPress, title, img, taskIsComplete, type, size}) => {
     const width = Dimensions.get('window').width;
     const large = width / 1.15;
     const small = width / 3;
+    const medium = width /1.5;
     const smallest = width /4.5;
-    const btnSize = size === 'large' ? large : size === 'smallest' ? smallest : small
+    const btnSize = size === 'large' ? large : size === 'smallest' ? smallest : size === 'medium' ? medium : small
     const btnBgColor = taskIsComplete === true ? '#6CBE49' : 'rgba(0,0,0,.5)';
     type === 'withImg' ? 'withIcon' : null;  // define if button has an image or icon
 
     const appButtonContainer = {
-        backgroundColor: size === 'small' && taskIsComplete === true ? '#6CBE49' : size === 'smallest' && taskIsComplete === true ? '#6CBE49' : '#808080' ,
+        backgroundColor: size === 'small' && taskIsComplete === true ? '#6CBE49' : size === 'smallest' || taskIsComplete === true ? '#6CBE49' : '#808080' ,
         borderRadius: size === 'small' ? 15 : 19,
-        padding: size === 'small' ? 15 : size === 'smallest' ? 5 : 15,
+        padding: size === 'small' ? 15 : size === 'smallest' ? 5 : 20,
         width: btnSize,
-        alignItems: 'center',
-        margin: 10,
+        alignItems: 'center'
     };
 
     const appButtonText = {
