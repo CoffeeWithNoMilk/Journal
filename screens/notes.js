@@ -17,10 +17,11 @@ const Notes = ({navigation}) => {
     }
 
     const actionHeading = {
-        flex: 0.15,
+        paddingHorizontal: 20,
+        paddingVertical: 20,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end', 
     }
 
     const textContainerStyle = {
@@ -48,13 +49,14 @@ const Notes = ({navigation}) => {
         <KeyboardAvoidingView style ={{flex:1}}behavior= {'padding'} enabled={true}>
         <View style={container}>
             <View style={actionHeading}>
-                <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                    <Text style={{ color: 'white', margin: 15, fontSize: 18 }}>Cancel</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('App')}>
+                    <Text style={{ color: 'white', fontSize: 16 }}>Cancel</Text>
                 </TouchableOpacity>
 
-                <Button title='Journal' size={'smallest'} taskIsComplete={true} />
+                <Button title='Journal' size={'smallest'} taskIsComplete={false} />
             </View>
 
+            <View style = {{flex: 1,  backgroundColor: 'rgba(0,0,0,.5)', width:'100%'}}>
             <View style = {tradeContext}>
                     <View>
                         <Text style = {{color:'white', marginBottom: 5}}>Strategy</Text>
@@ -111,6 +113,8 @@ const Notes = ({navigation}) => {
                 <View style={footer2}>
 
                 </View>
+            </View>
+           
 
         </View>
         </KeyboardAvoidingView>

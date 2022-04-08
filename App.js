@@ -8,21 +8,23 @@ import  AuthenticatedUserProvider  from './providers';
 import  SafeAreaProvider  from 'react-native-safe-area-context';
 import  RootNavigator  from './navigator/rootNavigator';
 
+import RootStack from './navigator/rootStack';
+
 
 
 const App = () => {
   return (
-    // <NavigationContainer>
-    //   <Tabs />
-    // </NavigationContainer>
+    <NavigationContainer>
+      <RootStack />
+    </NavigationContainer>
     // <NavigationContainer>
     //     <AuthStack />
     // </NavigationContainer>
-    <AuthenticatedUserProvider>
-      <SafeAreaProvider>
-        <RootNavigator />
-      </SafeAreaProvider>
-    </AuthenticatedUserProvider>
+    // <AuthenticatedUserProvider>
+    //   <SafeAreaProvider>
+    //     <RootNavigator />
+    //   </SafeAreaProvider>
+    // </AuthenticatedUserProvider>
   );
 };
 

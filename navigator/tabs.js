@@ -8,11 +8,10 @@ import JournalScreen from '../screens/journalScreen';
 //import Notes from '../screens/notes'; //test complete
 import LeaderBoard from '../screens/leaderboardScreen';
 import AccountScreen from '../screens/accountScreen';
-import Home from './homeStack';
+import Home from '../screens/homeScreen';
 import Journal from './journalStack';
 
 const Tab = createBottomTabNavigator();
-
 
 const Tabs = () => {
     return (

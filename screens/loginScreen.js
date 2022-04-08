@@ -170,6 +170,7 @@ const LoginScreen = ({ navigation }) => {
                         error={!!password.error}
                         errorText={password.error}
                         secureTextEntry
+                        textContentType='password'
                         placeholder='Password'
                         style={input}
                         placeholderTextColor={'gray'}

@@ -155,7 +155,7 @@ const selectedPeriod = {
              showsVerticalScrollIndicator={false}
              style={{marginBottom:20}} />
       </View>
-      <View style={{ position:'absolute', bottom: 0, alignItems:'flex-end', width: '100%', paddingHorizontal:20}}>
+      <View style={{ position:'absolute', bottom: 10, alignItems:'flex-end', width: '100%', paddingHorizontal:20}}>
             <Button title = 'Join Challenge' size={'small'} taskIsComplete={true}/>
       </View>
     </View>
